@@ -7,7 +7,7 @@ describe ('Search for Playstation 5', () =>{
     it ('passes', () => {
         cy.wait(3000)
         cy.visit(commondata.url)
-        CommonElements.InsertKeysearchWord.type(playdata.busca)        
+        CommonElements.InsertKeysearchWord(playdata.busca)        
         //Playmethods.InsertKeysearchWord(playdata.busca)
         CommonElements.ClickOnSearchutton.click()
         //Playmethods.ClickOnSearchutton()
