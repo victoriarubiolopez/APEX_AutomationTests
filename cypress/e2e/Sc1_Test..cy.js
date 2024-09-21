@@ -21,8 +21,8 @@ describe ('Search for Playstation 5', () =>{
         Playmethods.ClickonItemeSelection(playdata.SelectedItem)
         cy.get('#titleSection').contains('PlayStation®5 (Modelo Slim) - Pack con 2 Juegos - Digital').should('be.visible')
         //valida price
-        //cy.get('#corePrice_feature_div').contains('$9,189.00')
-        cy.get('#corePrice_feature_div').should('be-visible')
+        cy.get('#corePrice_feature_div').contains('$9,299')
+        
     }
 )
 })
