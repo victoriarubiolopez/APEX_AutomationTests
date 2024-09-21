@@ -2,10 +2,10 @@ import { CommonElements } from "./common.elements"
 
 export class CommonMethods{
     static InsertSearchWord (){
-        CommonElements.textboxes.TypeSearchWord.type()
+        CommonElements.textboxes.SearchWord.type()
     }
     static ClickOnSearchButton(){
-        CommonElements.buttons.ClickSearchButton.click()
+        CommonElements.buttons.SearchButton.click()
     }
  
 }

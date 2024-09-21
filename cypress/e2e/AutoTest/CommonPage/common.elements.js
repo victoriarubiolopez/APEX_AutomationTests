@@ -1,14 +1,14 @@
 export class CommonElements {
     static get textboxes(){
         return{
-            get TypeSearchWord(){
+            get SearchWord(){
                 return cy.get('twotabsearchtextbox')
             }
         }
     }
     static get buttons(){
         return{
-            get ClickSearchButton(){
+            get SearchButton(){
                 return cy.get('.nav-input#nav-search-submit-button')
             }
         }
