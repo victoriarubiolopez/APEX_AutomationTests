@@ -1,5 +1,5 @@
 import { playdata } from "./Scenario1/Data_Elements_Methods/playstation.data"
-import { PlayElements } from "./Data_Elements_Methods/playstation.elements"
+import { PlayElements } from "./AutoTest/Scenario1/Data_Elements_Methods/playstation.elements"
 import { Playmethods } from "./Scenario1//Data_Elements_Methods/playstation.methods"
 describe ('Search for Playstation 5', () =>{
   it ('passes', () => {
