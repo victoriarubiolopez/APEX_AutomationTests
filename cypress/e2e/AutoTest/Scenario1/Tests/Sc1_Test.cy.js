@@ -1,6 +1,6 @@
-import { playdata } from "./POM_Sc1/playstation.data"
-import { PlayElements } from "./POM_Sc1/playstation.elements"
-import { Playmethods } from "./POM_Sc1/playstation.methods"
+import { playdata } from "./Data_Elements_Methods/playstation.data"
+import { PlayElements } from "./Data_Elements_Methods/playstation.elements"
+import { Playmethods } from "./Data_Elements_Methods/playstation.methods"
 describe ('Search for Playstation 5', () =>{
   it ('passes', () => {
     cy.visit(playdata.url) 
