@@ -2,7 +2,7 @@ export class CommonElements {
     static get textboxes(){
         return{
             get SearchWord(){
-                return cy.get('twotabsearchtextbox')
+                return cy.get("#twotabsearchtextbox")
             }
         }
     }
