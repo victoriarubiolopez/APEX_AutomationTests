@@ -3,6 +3,7 @@ import { Playmethods } from "./AutoTest/Scenario1/Data_Elements_Methods/playstat
 
 describe ('Search for Playstation 5', () =>{
     it ('passes', () => {
+        cy.wait(10000)
         cy.visit(playdata.url) 
         Playmethods.InsertKeysearchWord(playdata.busca)
         Playmethods.ClickOnSearchutton()
