@@ -1,5 +1,6 @@
 import { commondata } from "./AutoTest/CommonPage/common.data"
 import { CommonElements } from "./AutoTest/CommonPage/common.elements"
+import { CommonMethods } from "./AutoTest/CommonPage/common.methods"
 import { playdata } from "./AutoTest/Scenario1/Data_Elements_Methods/playstation.data"
 import { Playmethods } from "./AutoTest/Scenario1/Data_Elements_Methods/playstation.methods"
 
@@ -7,9 +8,9 @@ describe ('Search for Playstation 5', () =>{
     it ('passes', () => {
         cy.wait(3000)
         cy.visit(commondata.url)
-        CommonElements.InsertKeysearchWord(playdata.busca)        
+        CommonMethods.InsertSearchWord(playdata.busca)        
         //Playmethods.InsertKeysearchWord(playdata.busca)
-        CommonElements.ClickOnSearchutton()
+        CommonMethods.ClickOnSearchutton()
         //Playmethods.ClickOnSearchutton()
             //valide results, consoles and games
         cy.get('.a-section div .s-no-outline .a-size-medium-plus ').contains('Resultados')
