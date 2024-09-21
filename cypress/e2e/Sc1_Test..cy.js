@@ -14,8 +14,7 @@ describe ('Search for Playstation 5', () =>{
         //Playmethods.ClickOnSearchutton()
             //valide results, consoles and games
         //valida results set
-        //cy.get('.a-section div .s-no-outline .a-size-medium-plus ').contains('Resultados')
-        cy.get('.a-section div .s-no-outline .a-size-medium-plus ').should('be-visible')
+        cy.get('.a-section div .s-no-outline .a-size-medium-plus ').contains('Resultados')
         cy.get('.a-section div .a-link-normal .a-size-base').contains('Consolas de PlayStation 4')
         cy.get('.a-section div .a-link-normal .a-size-base').contains('Juegos de PlayStation 5')
         // select an item
