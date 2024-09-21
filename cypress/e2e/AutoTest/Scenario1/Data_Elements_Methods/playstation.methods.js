@@ -1,4 +1,4 @@
-import { PlayElements } from "./Scenario1/Data_Elements_Methods/playstation.data/playstation.elements"
+import { PlayElements } from "./playstation.elements"
 
 export class Playmethods {
     static InsertKeysearchWord(SearchKeyWord){
