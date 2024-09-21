@@ -9,7 +9,7 @@ describe ('Search for Playstation 5', () =>{
         cy.visit(commondata.url)
         CommonElements.InsertKeysearchWord(playdata.busca)        
         //Playmethods.InsertKeysearchWord(playdata.busca)
-        CommonElements.ClickOnSearchutton.click()
+        CommonElements.ClickOnSearchutton()
         //Playmethods.ClickOnSearchutton()
             //valide results, consoles and games
         cy.get('.a-section div .s-no-outline .a-size-medium-plus ').contains('Resultados')
