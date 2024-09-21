@@ -1,7 +1,6 @@
 export class commondata {
-    static get sharedata(){
-        return{
-            url:"http://www.amazon.com.mx"
-        }
+    static get url() {
+        return 'http://www.amazon.com.mx';
+        
     }
 }
