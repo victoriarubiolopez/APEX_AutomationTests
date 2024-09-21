@@ -10,7 +10,7 @@ describe ('Search for Playstation 5', () =>{
         cy.visit(commondata.url)
         CommonMethods.InsertSearchWord(playdata.busca)        
         //Playmethods.InsertKeysearchWord(playdata.busca)
-        CommonMethods.ClickOnSearchutton()
+        CommonMethods.ClickOnSearchButton()
         //Playmethods.ClickOnSearchutton()
             //valide results, consoles and games
         cy.get('.a-section div .s-no-outline .a-size-medium-plus ').contains('Resultados')
