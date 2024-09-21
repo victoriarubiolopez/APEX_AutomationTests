@@ -1,8 +1,9 @@
 import { smartdata } from "./AutoTest/Scenario2/Data_Elements_Methods/smart.data"
 import {playdata} from "./AutoTest/Scenario1/Data_Elements_Methods/playstation.data"
+import { commondata } from "./AutoTest/CommonPage/common.data"
 describe('Scenario Smart Tv', () => {
     it ('passes', () => {
-        cy.visit(playdata.url)
+        cy.visit(commondata.url)
         cy.get('#twotabsearchtextbox').type('smart tv')
         cy.get(".nav-input#nav-search-submit-button").click()
         cy.get('#filter-p_36 .a-size-base').contains('Precio')
