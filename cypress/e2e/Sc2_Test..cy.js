@@ -1,5 +1,5 @@
 import { smartdata } from "./AutoTest/Scenario2/Data_Elements_Methods/smart.data"
-
+import {playdata} from "./AutoTest/Scenario1/Data_Elements_Methods/playstation.data"
 describe('Scenario Smart Tv', () => {
     it ('passes', () => {
         cy.visit(playdata.url)
