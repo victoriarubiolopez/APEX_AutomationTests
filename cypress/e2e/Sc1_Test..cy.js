@@ -2,6 +2,7 @@ import { commondata } from "./AutoTest/CommonPage/common.data"
 import { CommonElements } from "./AutoTest/CommonPage/common.elements"
 import { CommonMethods } from "./AutoTest/CommonPage/common.methods"
 import { playdata } from "./AutoTest/Scenario1/Data_Elements_Methods/playstation.data"
+import { PlayElements } from "./AutoTest/Scenario1/Data_Elements_Methods/playstation.elements"
 import { Playmethods } from "./AutoTest/Scenario1/Data_Elements_Methods/playstation.methods"
 
 describe ('Search for Playstation 5', () =>{
@@ -9,12 +10,10 @@ describe ('Search for Playstation 5', () =>{
         cy.wait(3000)
         cy.visit(commondata.url)
         CommonMethods.InsertSearchWord(playdata.busca)        
-        //Playmethods.InsertKeysearchWord(playdata.busca)
         CommonMethods.ClickOnSearchButton()
-        //Playmethods.ClickOnSearchutton()
-            //valide results, consoles and games
         //valida results set
-        cy.get('.a-section div .s-no-outline .a-size-medium-plus ').contains('Resultados')
+        //cy.get('.a-section div .s-no-outline .a-size-medium-plus ').contains('Resultados')
+        PlayElements.labels.Resultados('be-visible')
         cy.get('.a-section div .a-link-normal .a-size-base').contains('Consolas de PlayStation 4')
         cy.get('.a-section div .a-link-normal .a-size-base').contains('Juegos de PlayStation 5')
         // select an item
