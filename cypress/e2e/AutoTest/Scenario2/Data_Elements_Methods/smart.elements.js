@@ -1,12 +1,29 @@
 export class smartelements {
-    /*static get filters(){
+    static get Filters(){
         return {
-            static get Price() {
-                cy.get('div[class="a-section]').
-                find('[id^="filter-p_36"]')
-                .eq(0)
-
+            get Precio(){
+                return cy.contains('div', 'Precio');
+            },
+            get Tamaño(){
+                return cy.contains('div', 'Tamaño de Pantalla');
+            },
+            get Marca(){
+                return cy.contains('div','Marca');
+            },
+            get ConteoResultados(){
+                return cy.contains('div','resultados para')
+            }
+        
         }
     }
-}*/
+    static get ApplyFilter(){
+        return {
+            get Marca(){
+                return cy.contains('a','Marca');
+            },
+            get Tamaño(){
+                return cy.contains('a','48 a 55 in');
+            },
+        }
+    }
 }

@@ -20,7 +20,6 @@ export class Playmethods {
         this.ClickOnSearchutton()
         this.ClickonItemeSelection()
         cy.wait(5000)
-
-        
+       
     }
     }
