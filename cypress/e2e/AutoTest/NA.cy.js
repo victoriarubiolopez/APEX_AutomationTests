@@ -8,15 +8,11 @@ import { SmartMethods } from "./Scenario2/Data_Elements_Methods/smart.methods"
 describe ('PruebayError', () =>{
     it('passes', () => {
         cy.visit(commondata.url)
-        CommonMethods.InsertSearchWord(smartdata.keysearchword)
-        CommonMethods.ClickOnSearchButton()
-        cy.get(smartelements.Filters.Precio)
-        cy.get(smartelements.Filters.Tamaño)
-        cy.get(smartelements.Filters.Marca)
-        SmartMethods.ClickOnTamañoFilter()
-        //SmartMethods.ClickOnMarcaFilter()
-        //Validate the results counts
-        cy.get(smartelements.Filters.ConteoResultados)
+        cy.get('.hm-icon-label').click()
+/*         cy.contains('div','Alimentos y Bebidas').click()
+        cy.wait(2000)
+        cy.contains('div','Cervezas, Vinos y Licores').click() */
+
 
     }
 )
