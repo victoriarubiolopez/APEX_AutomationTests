@@ -5,13 +5,13 @@
   "scripts": {
     "test": "TEST",
     "cypress:open": "cypress open"
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.2",
     "cypress": "^13.14.2"
   }
 }
