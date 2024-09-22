@@ -11,9 +11,6 @@ export class PlayElements {
         return{
             get SelectedItem(){
                 return cy.contains('PlayStation®5 (Modelo Slim) - Pack con 2 Juegos - Digital')
-            },
-            get Resultados(){
-                return cy.contains('.a-section div .s-no-outline .a-size-medium-plus ', 'Resultados')
             }
         }
     }
