@@ -1,6 +1,6 @@
 import { smartelements } from "./smart.elements";
 
-export class SmartMethods {
+export class PageResultsMethods {
     static ClickOnTamañoFilter(){
         smartelements.ApplyFilter.Tamaño.click()
     }

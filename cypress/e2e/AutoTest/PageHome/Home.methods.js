@@ -1,21 +1,19 @@
-import { PlayElements } from "./playstation.elements"
+import { HomeElements } from "./Home.Elements"
 
-export class Playmethods {
+export class HomeMethods {
     static InsertKeysearchWord(SearchKeyWord){
-        PlayElements.textboxes.SearchKeyWord.type(SearchKeyWord)
-                
+        HomeElements.textboxes.SearchKeyWord.type(SearchKeyWord)
     }
 
     static ClickOnSearchutton() {
-        PlayElements.buttons.SearchBarButon.click()
-        
+        HomeElements.buttons.SearchBarButon.clear()
     }
  
     static ClickonItemeSelection(){
-        PlayElements.labels.SelectedItem.click()
+        HomeElements.labels.SelectedItem.click()
     }
     /**Se agrugan todos los metodos en uno solo, para mandar llamar una sola linea de codigo */
-    static search(SearchKeyWord) {
+    static SearchAll(SearchKeyWord) {
         this.InsertKeysearchWord(SearchKeyWord)
         this.ClickOnSearchutton()
         this.ClickonItemeSelection()

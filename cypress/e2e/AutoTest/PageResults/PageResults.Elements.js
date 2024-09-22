@@ -1,4 +1,4 @@
-export class smartelements {
+export class PageResultsElements {
     static get Filters(){
         return {
             get Precio(){

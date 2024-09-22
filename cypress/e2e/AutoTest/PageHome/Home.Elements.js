@@ -1,4 +1,4 @@
-export class PlayElements {
+export class HomeElements {
     static get textboxes() {
         return {
             get SearchKeyWord () {
