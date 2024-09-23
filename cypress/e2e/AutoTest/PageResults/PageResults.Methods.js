@@ -1,11 +1,11 @@
-import { smartelements } from "./smart.elements";
+import { PageResultsElements } from "./PageResults.Elements"
 
 export class PageResultsMethods {
     static ClickOnTamañoFilter(){
-        smartelements.ApplyFilter.Tamaño.click()
+        PageResultsElements.ApplyFilter.Tamaño.click()
     }
     static ClickOnMarcaFilter(){
-        smartelements.ApplyFilter.Marca.Click()
+        PageResultsElements.ApplyFilter.Marca.click()
     }
     
 }
