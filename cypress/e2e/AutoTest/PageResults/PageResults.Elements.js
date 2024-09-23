@@ -10,19 +10,16 @@ export class PageResultsElements {
             get Marca(){
                 return cy.contains('div','Marca');
             },
-            get ConteoResultados(){
-                return cy.contains('div','resultados para');
-            }
         
         }
     }
     static get ApplyFilter(){
         return {
             get Marca(){
-                return cy.contains('a','Marca');
+                return cy.get('[id*="p_123/237204"] .a-list-item .a-link-normal .a-size-base');
             },
             get Tamaño(){
-                return cy.contains('a','48 a 55 in');
+                return cy.get('[id*="p_n_size_browse-bin/9690388011"] .a-list-item .a-link-normal .a-size-base');
             },
         }
     }
@@ -42,6 +39,9 @@ export class PageResultsElements {
             },
             get Precio(){
                 return cy.get('#priceRefinements').find('.a-section div .a-size-base').eq(0);
+            },
+            get ConteoResultados(){
+                return cy.get('#search div .a-section');
             },
         }
     }

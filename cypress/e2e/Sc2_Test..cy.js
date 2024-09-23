@@ -13,10 +13,10 @@ describe('Scenario Smart TV', ()=> {
         PageResultsElements.Labels.TamañoDePantalla.should('contains.text','Tamaño de Pantalla de la Televisión')
         PageResultsElements.Labels.Precio.should('contains.text','Precio')
         //Apply Filters Tamaño and MArca
-        cy.get('#brandsRefinements').find('.a-unordered-list .a-link-normal .a-size-base').eq(5).should('contains.text','Sony').click();
-        cy.contains('48 a 55 in ').click()
+        PageResultsElements.ApplyFilter.Marca.contains('Sony').click()
+        PageResultsElements.ApplyFilter.Tamaño.contains('48 a 55 in').click()
         //validate counting results
-        cy.get('#search div .a-section').contains('resultados para')
+        PageResultsElements.Labels.ConteoResultados.contains('resultados para')
     
 
     }
