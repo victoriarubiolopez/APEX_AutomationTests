@@ -9,13 +9,15 @@ describe('Scenario Smart TV', ()=> {
         cy.visit(commondata.url)
         CommonMethods.InsertSearchWord(HomeData.BuscaSmatTV)
         CommonMethods.ClickOnSearchButton()
-
-        cy.get(PageResultsElements.Filters.Precio)
-        cy.get(PageResultsElements.Filters.Tamaño)
-        cy.get(PageResultsElements.Filters.Marca)
-        PageResultsMethods.ClickOnTamañoFilter()
-        
-
+        //Size and Prices filters are displayed (exist,visible)
+        PageResultsElements.Labels.TamañoDePantalla.should('contains.text','Tamaño de Pantalla de la Televisión')
+        PageResultsElements.Labels.Precio.should('contains.text','Precio')
+        //Apply Filters Tamaño and MArca
+        cy.get('#brandsRefinements').find('.a-unordered-list .a-link-normal .a-size-base').eq(5).should('contains.text','Sony').click();
+        cy.contains('48 a 55 in ').click()
+        //validate counting results
+        cy.get('#search div .a-section').contains('resultados para')
+    
 
     }
     )

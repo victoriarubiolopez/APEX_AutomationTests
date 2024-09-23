@@ -37,6 +37,12 @@ export class PageResultsElements {
             get ConsolasDePlaystation(){
                 return cy.get('#s-refinements').find('.a-section div .a-link-normal .a-size-base').eq(4);
             },
+            get TamañoDePantalla(){
+                return cy.get('#p_n_size_browse-bin-title').first();
+            },
+            get Precio(){
+                return cy.get('#priceRefinements').find('.a-section div .a-size-base').eq(0);
+            },
         }
     }
 }
