@@ -1,8 +1,8 @@
 import { commondata } from "./AutoTest/CommonPage/common.data"
 import { CommonMethods } from "./AutoTest/CommonPage/common.methods"
 import { HomeData } from "./AutoTest/PageHome/Home.data"
-import { HomeElements } from "./AutoTest/PageHome/Home.Elements"
 import { HomeMethods } from "./AutoTest/PageHome/Home.methods"
+import { PageProductDetailsElements } from "./AutoTest/PageProductDetails/PageProductDetails.Elements"
 import { PageResultsElements } from "./AutoTest/PageResults/PageResults.Elements"
 
 describe ('Search for Playstation 5', () =>{
@@ -11,17 +11,17 @@ describe ('Search for Playstation 5', () =>{
         cy.visit(commondata.url)     
         CommonMethods.InsertSearchWord(HomeData.BuscaPlaystation)
         CommonMethods.ClickOnSearchButton()
-        //valida results set
+        //valida results page title
         PageResultsElements.Labels.Resultados.should('have.text','Resultados')
-
-        cy.wait(5000)
-        cy.get('.a-section div .a-link-normal .a-size-base').contains('Consolas de PlayStation 4')
-        cy.get('.a-section div .a-link-normal .a-size-base').contains('Juegos de PlayStation 5')
+        //Valida results set contains Consolas y Juegos de Playstation
+        PageResultsElements.Labels.ConsolasDePlaystation.should('have.text','Consolas de PlayStation')
+        PageResultsElements.Labels.JuegosDePlayStation.should('have.text','Juegos de PlayStation 5')
         // select an item
         HomeMethods.ClickonItemeSelection(HomeData.SelectedItem)
-        cy.get('#titleSection').contains('PlayStation®5 (Modelo Slim) - Pack con 2 Juegos - Digital').should('be.visible')
+        //valida exist product title 
+        PageProductDetailsElements.ProductDetailsLabels.ProductTile.should('exist')
         //valida price
-        cy.get('#corePrice_feature_div').contains('$9,149')
+        PageProductDetailsElements.ProductDetailsLabels.ProductPrice.should('exist')
         
     }
 )

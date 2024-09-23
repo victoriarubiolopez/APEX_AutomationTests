@@ -11,7 +11,7 @@ export class PageResultsElements {
                 return cy.contains('div','Marca');
             },
             get ConteoResultados(){
-                return cy.contains('div','resultados para')
+                return cy.contains('div','resultados para');
             }
         
         }
@@ -29,8 +29,14 @@ export class PageResultsElements {
     static get Labels(){
         return{
             get Resultados(){
-                return cy.get('.a-section div .s-no-outline .a-size-medium-plus').first()
-            }
+                return cy.get('.a-section div .s-no-outline .a-size-medium-plus').first();
+            },
+            get JuegosDePlayStation(){
+                return cy.get('#s-refinements').find('.a-section div .a-link-normal .a-size-base').eq(5);
+            },
+            get ConsolasDePlaystation(){
+                return cy.get('#s-refinements').find('.a-section div .a-link-normal .a-size-base').eq(4);
+            },
         }
     }
 }
