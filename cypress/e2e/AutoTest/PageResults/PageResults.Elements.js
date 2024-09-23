@@ -26,4 +26,11 @@ export class PageResultsElements {
             },
         }
     }
+    static get Labels(){
+        return{
+            get Resultados(){
+                return cy.get('.a-section div .s-no-outline .a-size-medium-plus').first()
+            }
+        }
+    }
 }
