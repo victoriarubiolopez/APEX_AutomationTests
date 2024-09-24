@@ -1,13 +1,16 @@
 import { commondata } from "./AutoTest/CommonPage/common.data"
 import { CommonMethods } from "./AutoTest/CommonPage/common.methods"
+import { HomeData } from "./AutoTest/PageHome/Home.data"
 
 
 describe ('PruebayError', () =>{
     it('passes', () => {
         cy.visit(commondata.url)     
-        CommonMethods.InsertSearchWord(HomeData.BuscaPlaystation)
+        CommonMethods.InsertSearchWord(HomeData.BuscaSmatTV)
         CommonMethods.ClickOnSearchButton()
-        cy.get('[type="checkbox"]').check('Sony')
+        
+        cy.get('li[aria-label="Sony"] input[type="checkbox"]').should('exist')
+        
         /* cy.wait(10000);
         cy.get()
         cy.get('#brandsRefinements').find('.a-unordered-list .a-link-normal .a-size-base').eq(1).should('be-checked')
