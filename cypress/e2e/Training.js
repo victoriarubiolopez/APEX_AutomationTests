@@ -1,5 +1,5 @@
-import { commondata } from "./CommonPage/common.data"
-import { CommonMethods } from "./CommonPage/common.methods"
+import { commondata } from "./AutoTest/CommonPage/common.data"
+import { CommonMethods } from "./AutoTest/CommonPage/common.methods"
 
 
 describe ('PruebayError', () =>{
