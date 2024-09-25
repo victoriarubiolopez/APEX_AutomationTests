@@ -7,7 +7,12 @@ import { PageResultsMethods } from "./AutoTest/PageResults/PageResults.Methods"
 describe('Scenario Smart TV', ()=> {
     it('passes', ()=>{
         cy.visit(commondata.url)
-        CommonMethods.InsertSearchWord(HomeData.BuscaSmatTV)
+        cy.get('HamburgerMenuDesktop').click()
+        cy.get('#hmenu-content').eq(25).should('contains.text','Salud, Belleza y Cuidado Personal').click()
+
+
+
+        /* CommonMethods.InsertSearchWord(HomeData.BuscaSmatTV)
         CommonMethods.ClickOnSearchButton()
         //Size and Prices filters are displayed (exist,visible)
         PageResultsElements.Labels.TamañoDePantalla.should('contains.text','Tamaño de Pantalla de la Televisión')
@@ -16,7 +21,7 @@ describe('Scenario Smart TV', ()=> {
         PageResultsElements.ApplyFilter.Marca.should('exist').check({force: true})
         PageResultsElements.ApplyFilter.Tamaño.should('exist').check({force: true})
         //validate counting results
-        PageResultsElements.Labels.ConteoResultados.contains('resultados para')
+        PageResultsElements.Labels.ConteoResultados.contains('resultados para') */
     
 
     }

@@ -16,10 +16,14 @@ export class PageResultsElements {
     static get ApplyFilter(){
         return {
             get Marca(){
-                return cy.get('[id*="p_123/237204"] .a-list-item .a-link-normal .a-size-base');
+                //return cy.get('[id*="p_123/237204"] .a-list-item .a-link-normal .a-size-base');//Este funciono pero el de abajo es mas PRO
+                //buscar el tipo de elemento que tenga el id 
+                return cy.get('li[aria-label="Sony"] input[type="checkbox"]')
             },
             get Tamaño(){
-                return cy.get('[id*="p_n_size_browse-bin/9690388011"] .a-list-item .a-link-normal .a-size-base');
+                //return cy.get('[id*="p_n_size_browse-bin/9690388011"] .a-list-item .a-link-normal .a-size-base');//Este funciono pero el de abajo es mas PRO
+                return cy.get('li[aria-label="48 a 55 in"] input[type="checkbox"]')
+
             },
         }
     }

@@ -9,7 +9,7 @@ describe ('PruebayError', () =>{
         CommonMethods.InsertSearchWord(HomeData.BuscaSmatTV)
         CommonMethods.ClickOnSearchButton()
         
-        cy.get('li[aria-label="Sony"] input[type="checkbox"]').should('exist')
+        cy.get('li[aria-label="Sony"] input[type="checkbox"]').should('exist').check({force: true})
         
         /* cy.wait(10000);
         cy.get()
